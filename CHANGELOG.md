@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Venkat-Swaraj-AutoVRse/example-package/compare/v1.1.0...v1.2.0) (2025-12-03)
+
+
+### Features
+
+* add script to prepare package for distribution ([84e36d2](https://github.com/Venkat-Swaraj-AutoVRse/example-package/commit/84e36d2dc1194bdae8b7161113188cd85cdabc09))
+
 # [1.1.0](https://github.com/Venkat-Swaraj-AutoVRse/example-package/compare/v1.0.0...v1.1.0) (2025-12-03)
 
 
