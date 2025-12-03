@@ -1,0 +1,49 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://npm.autovrse.app/'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Authenticate with Registry
+        id: auth
+        env:
+          USERNAME: ${{ secrets.REGISTRY_USERNAME }}
+          PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
+        run: |
+          RESPONSE=$(curl -s -X POST "https://infinity-workshop-api.autovrse.app/api/v1/auth/login" \
+            -H "Content-Type: application/json" \
+            -d "{\"username\": \"$USERNAME\", \"password\": \"$PASSWORD\"}")
+          TOKEN=$(echo $RESPONSE | jq -r '.data.token')
+          echo "::add-mask::$TOKEN"
+          echo "NPM_TOKEN=$TOKEN" >> $GITHUB_ENV
+
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ env.NPM_TOKEN }}
+        run: npx semantic-release
