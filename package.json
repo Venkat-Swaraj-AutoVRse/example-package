@@ -1,6 +1,10 @@
 {
   "name": "com.autovrse.example-package",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Venkat-Swaraj-AutoVRse/example-package.git"
+  },
   "displayName": "Example package",
   "description": "A brief description of what your package does.",
   "files": [
