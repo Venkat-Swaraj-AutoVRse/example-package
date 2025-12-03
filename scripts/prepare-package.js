@@ -25,13 +25,11 @@ async function preparePackage() {
     const {
         scripts,
         devDependencies,
-        publishConfig,
         files,
         ...cleanPackageJson
     } = sourcePackageJson;
 
     // Ensure 'files' is NOT in the clean package.json (implicit inclusion in dist)
-    // Ensure 'publishConfig' is removed (handled by .npmrc or semantic-release)
 
     // Write clean package.json to dist
     await fs.writeJson(path.join(distDir, 'package.json'), cleanPackageJson, { spaces: 2 });
