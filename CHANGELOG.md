@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/Venkat-Swaraj-AutoVRse/example-package/compare/v1.0.0...v1.1.0) (2025-12-03)
+
+
+### Features
+
+* add github actions workflow for automated releases and include repository URL in package.json ([e482bca](https://github.com/Venkat-Swaraj-AutoVRse/example-package/commit/e482bcae0694a61eb678624715a747df705c9d81))
+* configure semantic-release to prepare and publish a clean package from a `dist` directory ([8a8235a](https://github.com/Venkat-Swaraj-AutoVRse/example-package/commit/8a8235a6865309a7d1901a1488f50122c2232197))
+
 # 1.0.0 (2025-12-03)
 
 
