@@ -37,12 +37,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          registry-url: 'https://npm.autovrse.app/'
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install dependencies
-        env:
-          NODE_AUTH_TOKEN: ${{ env.NPM_TOKEN }}
         run: npm install
+
+      - name: Configure Private Registry Auth
+        run: npm config set //npm.autovrse.app/:_authToken "${NPM_TOKEN}"
+        env:
+          NPM_TOKEN: ${{ env.NPM_TOKEN }}
 
       - name: Release
         env:
