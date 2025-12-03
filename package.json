@@ -3,6 +3,18 @@
   "version": "1.0.0",
   "displayName": "Example package",
   "description": "A brief description of what your package does.",
+  "files": [
+    "package.json",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE*",
+    "Third Party Notices.md",
+    "Editor",
+    "Runtime",
+    "Tests",
+    "Samples~",
+    "Documentation~"
+  ],
   "unity": "2020.3",
   "scripts": {
     "prepare": "husky"
@@ -23,9 +35,12 @@
     "@commitlint/cli": "^20.0.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.6",
     "@semantic-release/npm": "^13.1.2",
+    "fs-extra": "^11.3.2",
+    "glob": "^13.0.0",
     "husky": "^9.1.7",
     "pino-pretty": "^13.0.0",
     "semantic-release": "^25.0.2"
