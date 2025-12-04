@@ -6,7 +6,7 @@ module.exports = {
     },
   },
   rules: {
-    'type-enum': [2, 'always', ['feature', 'bugfix', 'hotfix']],
+    'type-enum': [2, 'always', ['feature', 'bugfix', 'hotfix', 'chore']],
     'type-case': [2, 'always', 'lower-case'],
     'type-empty': [2, 'never'],
     'scope-empty': [0],
