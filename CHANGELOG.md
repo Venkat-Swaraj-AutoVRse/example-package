@@ -1,3 +1,5 @@
+# [1.3.0-dev.1](https://github.com/Venkat-Swaraj-AutoVRse/example-package/compare/v1.2.0...v1.3.0-dev.1) (2025-12-04)
+
 # [1.3.0-develop.1](https://github.com/Venkat-Swaraj-AutoVRse/example-package/compare/v1.2.0...v1.3.0-develop.1) (2025-12-04)
 
 # [1.2.0](https://github.com/Venkat-Swaraj-AutoVRse/example-package/compare/v1.1.0...v1.2.0) (2025-12-03)
